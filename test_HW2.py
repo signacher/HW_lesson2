@@ -17,5 +17,6 @@ def test_google_search(set_up_browser):
 def test_google_nullsearch(set_up_browser):
     length = random.randint(10, 15)
     rand_string = generate_random_string(length)
+    print('\n', 'Поиск по строке: ' + rand_string)
     browser.element('[name="q"]').should(be.blank).type(rand_string).press_enter()
     browser.element('#result-stats').should(have.text('Результатов: примерно 0'))
