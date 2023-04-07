@@ -1,5 +1,7 @@
 import pytest
 from selene.support.shared import browser
+
+
 @pytest.fixture()
 def set_up_browser():
     browser.open('https://google.com')
